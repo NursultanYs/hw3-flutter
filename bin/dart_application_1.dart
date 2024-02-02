@@ -2,25 +2,25 @@ import 'dart:io';
 
 void main() {
   print("Вве-дите первое число");
-  num num1 = double.tryParse(stdin.readLineSync() ?? "") ?? -12312312321311;
-  if (num1 == -12312312321311) {
+  var num1 = double.tryParse(stdin.readLineSync() ?? "") ?? '';
+  if (num1 == '') {
     print("Вы ввели не число,введите еще раз!");
-    num1 = double.tryParse(stdin.readLineSync() ?? "") ?? -12312312321311;
-  } else {}
+    num1 = double.tryParse(stdin.readLineSync() ?? "") ?? '';
+  } 
 
   print('Введите операцию (+ - * /)');
   String action = stdin.readLineSync() ?? "";
 
   print("Введите второе число");
-  num num2 = double.tryParse(stdin.readLineSync() ?? "") ?? -12312312321311;
-  if (num2 == -12312312321311) {
+  var num2 = double.tryParse(stdin.readLineSync() ?? "") ?? '';
+  if (num2 == '') {
     print("Вы ввели не число,введите еще раз!");
-    num2 = double.tryParse(stdin.readLineSync() ?? "") ?? -12312312321311;
-  } else {}
+    num2 = double.tryParse(stdin.readLineSync() ?? "") ?? '';
+  } 
 
   var result;
 
-  if (num1 != -12312312321311 && num2 != -12312312321311) {
+  if (num1 is num && num2 is num) {
     if (action == '+') {
       result = num1 + num2;
     } else if (action == '-') {
